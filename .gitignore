@@ -1,0 +1,47 @@
+# 인증정보와 실행 환경
+.env
+.env.*
+!.env.example
+.aws/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*credentials*
+*secret*
+
+# 모델과 센서 원본
+*.engine
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.bag
+*.db3
+*.mcap
+captures/
+vlm_frames/
+raw_data/
+private_data/
+original_logs/
+*.jsonl
+*.sqlite
+*.sqlite3
+
+# Python·운영체제·편집기 출력
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 로컬 실행과 보정 결과
+*.log
+drift*.csv
+overhead_cam.yaml

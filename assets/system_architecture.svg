@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="760" viewBox="0 0 1360 760" role="img" aria-labelledby="title desc">
+<title id="title">NAVISIGHT 실기체 통합 구조</title>
+<desc id="desc">위험 감지와 선정지, 비동기 VLM 판단, 경로 재탐색, BEV 위치 보정 및 운영자 관제의 연결</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker>
+</defs>
+<rect width="1360" height="760" fill="#ffffff"/>
+<g font-family="Malgun Gothic, Arial, sans-serif" fill="#16263a">
+<text x="40" y="46" font-size="30" font-weight="700">NAVISIGHT</text>
+<text x="40" y="76" font-size="17" fill="#526477">실기체 통합 구조 · ROS 2 Humble</text>
+
+<path d="M 220 215 L 270 215" fill="none" stroke="#728399" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 470 215 L 540 215" fill="none" stroke="#c83c45" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 760 215 L 830 215" fill="none" stroke="#c83c45" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 1050 215 L 1120 215" fill="none" stroke="#728399" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 370 260 L 370 370" fill="none" stroke="#7962b5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 470 417 L 540 417" fill="none" stroke="#7962b5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 650 370 L 650 260" fill="none" stroke="#7962b5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 760 240 L 795 240 L 795 417 L 830 417" fill="none" stroke="#b07b2b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 940 370 L 940 260" fill="none" stroke="#486f9c" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 220 625 L 270 625" fill="none" stroke="#3a83ab" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 470 625 L 940 625 L 940 465" fill="none" stroke="#3a83ab" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M 470 625 L 1090 625 L 1090 285 L 990 285 L 990 260" fill="none" stroke="#3a83ab" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<circle cx="940" cy="625" r="4" fill="#3a83ab"/>
+<path d="M 1120 417 L 1050 417" fill="none" stroke="#2f8b74" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<path d="M 1310 420 L 1330 420 L 1330 105 L 720 105 L 720 170" fill="none" stroke="#2f8b74" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<path d="M 1120 390 L 1105 390 L 1105 145 L 980 145 L 980 170" fill="none" stroke="#2f8b74" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="40" y="140" font-size="17" fill="#b82c38" text-anchor="start">위험 감지 · 선정지</text>
+<text x="40" y="340" font-size="17" fill="#71559e" text-anchor="start">VLM 상황 판단</text>
+<text x="40" y="550" font-size="17" fill="#34799e" text-anchor="start">외부 카메라 위치 보정</text>
+<rect x="40" y="170" width="180" height="90" rx="12" fill="#f4f7fb" stroke="#b8c7d8" stroke-width="1.5"/>
+<text x="130.0" y="202" font-size="20" fill="#16263a" text-anchor="middle">전방 카메라</text>
+<text x="130.0" y="227" font-size="16" fill="#526477" text-anchor="middle">RGB · Depth</text>
+<rect x="270" y="170" width="200" height="90" rx="12" fill="#f4f7fb" stroke="#b8c7d8" stroke-width="1.5"/>
+<text x="370.0" y="202" font-size="20" fill="#16263a" text-anchor="middle">위험 후보 감지</text>
+<text x="370.0" y="227" font-size="16" fill="#526477" text-anchor="middle">YOLOv5s · Depth</text>
+<rect x="540" y="170" width="220" height="90" rx="12" fill="#fff2f2" stroke="#e2a3aa" stroke-width="1.5"/>
+<text x="650.0" y="202" font-size="20" fill="#16263a" text-anchor="middle">안전 감독</text>
+<text x="650.0" y="227" font-size="16" fill="#526477" text-anchor="middle">응답 검증 · 승인 상태</text>
+<rect x="830" y="170" width="220" height="90" rx="12" fill="#f4f7fb" stroke="#b8c7d8" stroke-width="1.5"/>
+<text x="940.0" y="202" font-size="20" fill="#16263a" text-anchor="middle">웨이포인트 추종</text>
+<text x="940.0" y="227" font-size="16" fill="#526477" text-anchor="middle">상태 전이 · 속도 제어</text>
+<rect x="1120" y="170" width="190" height="90" rx="12" fill="#f4f7fb" stroke="#b8c7d8" stroke-width="1.5"/>
+<text x="1215.0" y="202" font-size="20" fill="#16263a" text-anchor="middle">AGV 구동</text>
+<text x="1215.0" y="227" font-size="16" fill="#526477" text-anchor="middle">ROSMASTER M1</text>
+<rect x="270" y="370" width="200" height="95" rx="12" fill="#f4f7fb" stroke="#b8c7d8" stroke-width="1.5"/>
+<text x="370.0" y="402" font-size="20" fill="#16263a" text-anchor="middle">프레임 버퍼</text>
+<text x="370.0" y="427" font-size="16" fill="#526477" text-anchor="middle">최근 약 2초</text>
+<text x="370.0" y="448" font-size="16" fill="#526477" text-anchor="middle">시간순 최대 4장</text>
+<rect x="540" y="370" width="220" height="95" rx="12" fill="#f5f1fc" stroke="#baa6d6" stroke-width="1.5"/>
+<text x="650.0" y="402" font-size="20" fill="#16263a" text-anchor="middle">Amazon Bedrock</text>
+<text x="650.0" y="427" font-size="16" fill="#526477" text-anchor="middle">Qwen3-VL-235B</text>
+<text x="650.0" y="448" font-size="16" fill="#526477" text-anchor="middle">상황·행동 제안</text>
+<rect x="830" y="370" width="220" height="95" rx="12" fill="#f4f7fb" stroke="#b8c7d8" stroke-width="1.5"/>
+<text x="940.0" y="402" font-size="20" fill="#16263a" text-anchor="middle">경로 계획</text>
+<text x="940.0" y="427" font-size="16" fill="#526477" text-anchor="middle">Dijkstra · 간선 차단</text>
+<rect x="1120" y="370" width="190" height="95" rx="12" fill="#eff8f4" stroke="#9cc9b9" stroke-width="1.5"/>
+<text x="1215.0" y="402" font-size="20" fill="#16263a" text-anchor="middle">웹 관제</text>
+<text x="1215.0" y="427" font-size="16" fill="#526477" text-anchor="middle">임무·상태·승인</text>
+<rect x="40" y="580" width="180" height="90" rx="12" fill="#f4f7fb" stroke="#b8c7d8" stroke-width="1.5"/>
+<text x="130.0" y="612" font-size="20" fill="#16263a" text-anchor="middle">위치 입력</text>
+<text x="130.0" y="637" font-size="16" fill="#526477" text-anchor="middle">외부 카메라</text>
+<text x="130.0" y="658" font-size="16" fill="#526477" text-anchor="middle">휠 오도메트리</text>
+<rect x="270" y="580" width="200" height="90" rx="12" fill="#eef6fb" stroke="#9dc5dd" stroke-width="1.5"/>
+<text x="370.0" y="612" font-size="20" fill="#16263a" text-anchor="middle">BEV 위치 보정</text>
+<text x="370.0" y="637" font-size="16" fill="#526477" text-anchor="middle">지도 좌표 · 정차 보정</text>
+<text x="505" y="201" font-size="14" fill="#b82c38" text-anchor="middle">선정지</text>
+<text x="795" y="201" font-size="14" fill="#b82c38" text-anchor="middle">정지</text>
+<text x="1085" y="201" font-size="14" fill="#526477" text-anchor="middle">속도</text>
+<text x="388" y="314" font-size="14" fill="#71559e" text-anchor="start">감지 이벤트</text>
+<text x="505" y="403" font-size="14" fill="#71559e" text-anchor="middle">최대 4장</text>
+<text x="668" y="314" font-size="14" fill="#71559e" text-anchor="start">판단 결과</text>
+<text x="807" y="326" font-size="14" fill="#946823" text-anchor="start">우회 요청</text>
+<text x="956" y="314" font-size="14" fill="#486f9c" text-anchor="start">경로</text>
+<text x="1085" y="403" font-size="14" fill="#2f8b74" text-anchor="middle">임무</text>
+<text x="970" y="92" font-size="14" fill="#2f8b74" text-anchor="middle">운영자 승인</text>
+<text x="1085" y="133" font-size="14" fill="#2f8b74" text-anchor="middle">운영자 정지</text>
+<text x="700" y="610" font-size="15" fill="#34799e" text-anchor="middle">보정 위치 · /odom_mat</text>
+<line x1="40" y1="720" x2="75" y2="720" stroke="#c83c45" stroke-width="3"/>
+<text x="88" y="726" font-size="16" fill="#c83c45" text-anchor="start">즉시 정지</text>
+<line x1="290" y1="720" x2="325" y2="720" stroke="#7962b5" stroke-width="3"/>
+<text x="338" y="726" font-size="16" fill="#7962b5" text-anchor="start">영상·상황 판단</text>
+<line x1="610" y1="720" x2="645" y2="720" stroke="#3a83ab" stroke-width="3"/>
+<text x="658" y="726" font-size="16" fill="#3a83ab" text-anchor="start">위치 보정</text>
+<line x1="930" y1="720" x2="965" y2="720" stroke="#2f8b74" stroke-width="3"/>
+<text x="978" y="726" font-size="16" fill="#2f8b74" text-anchor="start">운영자 명령</text>
+</g></svg>
